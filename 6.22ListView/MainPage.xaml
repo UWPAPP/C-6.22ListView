@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="_6._22ListView.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:_6._22ListView"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    >
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <StackPanel>
+            <ListView x:Name="listView" Width="100" ItemsSource="{Binding}"></ListView>
+
+            <ComboBox x:Name="ComboBox1" ItemsSource="{Binding MyMusic}"
+  Foreground="Black" FontSize="30" Height="50" Width="450">
+                <ComboBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" Margin="2">
+                            <TextBlock Text="{Binding name}" Margin="2" />
+                            <TextBlock Text="{Binding age}" Margin="2" />
+                            <TextBlock Text="{Binding name}" Margin="10,2,0,2" />
+                        </StackPanel>
+                    </DataTemplate>
+                </ComboBox.ItemTemplate>
+            </ComboBox>
+        </StackPanel>
+
+        <!--<Grid x:Name="LayoutRoot"  Background="#FF0C0C0C">
+            <TextBox x:Name="textBox1" Text="{Binding}" FontSize="30"
+    Height="120" Width="440" IsReadOnly="True"
+    TextWrapping="Wrap" AcceptsReturn="True" />
+        </Grid>-->
+
+    </Grid>
+</Page>
